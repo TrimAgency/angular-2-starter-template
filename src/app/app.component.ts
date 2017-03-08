@@ -7,5 +7,5 @@ import { API_URL } from '../environments/environment'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = API_URL;
+
 }

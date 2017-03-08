@@ -1,0 +1,24 @@
+<div>
+  <form #form="ngForm">
+
+    <div class="form-input-group">
+      <input type="email"
+             name="email" 
+             [(ngModel)]="user.email"
+             class="form-control" 
+             placeholder="Enter Email">
+      <input type="password" 
+             name="password"
+             [(ngModel)]="user.password"
+             class="form-control" 
+             placeholder="Enter Password">
+    </div>
+    {{ form.value | json }}
+    <div class="form-submit">
+        <button type="submit"
+                (click)="submitForm()"
+                >submit</button>
+    </div>
+
+  </form>
+</div>
