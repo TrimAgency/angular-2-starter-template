@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
-//Containers
+// Containers
 import { LoginComponent } from './containers/login.component';
-//Components
+// Components
 import { LoginFormComponent } from './components/login-form.component';
-//Services
-import { LoginService } from './login.service'
+// Services
+import { LoginService } from './login.service';
 
 @NgModule({
     declarations: [
@@ -26,7 +26,6 @@ import { LoginService } from './login.service'
     providers: [
         LoginService
     ]
-    
 })
 
-export class LoginModule{};
+export class LoginModule {};

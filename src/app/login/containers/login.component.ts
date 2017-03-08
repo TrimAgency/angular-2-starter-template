@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginService } from '../login.service';
-import { AuthService } from '../../services/auth.service'
+import { AuthService } from '../../services/auth.service';
 
 @Component({
     selector: 'app-login',
@@ -18,18 +18,17 @@ import { AuthService } from '../../services/auth.service'
 
 export class LoginComponent {
     constructor(private loginService: LoginService,
-                private authService: AuthService ){};
-    
+                private authService: AuthService ) {};
     submitLogin(event) {
         this.loginService
         .login(event.email, event.password)
-        .subscribe( (data) => { 
+        .subscribe( (data) => {
             // handle login success here
             this.authService.setToken(data.jwt);
         },
         (error: any) => { 
             // handle login error here
-            console.log(error); 
+            console.log(error);
         } );
     }
 }

@@ -7,15 +7,15 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 
 export class LoginFormComponent {
-    user: Object = {}
+    user: Object = {};
 
     @Output()
     submitLogin: EventEmitter<any> = new EventEmitter();
 
-    constructor(){};
+    constructor() {};
 
     submitForm() {
-        //this.submitLogin.emit(this.user);
+        // this.submitLogin.emit(this.user);
         console.log('login!')
     }
 
