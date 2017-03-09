@@ -7,5 +7,9 @@ import { API_URL } from '../environments/environment'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title: string;
 
+  constructor() {
+    this.title = 'Welcome to the Trim Angular 2 starter template';
+  }
 }
