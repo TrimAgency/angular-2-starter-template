@@ -26,7 +26,7 @@ export class LoginComponent {
             // handle login success here
             this.authService.setToken(data.jwt);
         },
-        (error: any) => { 
+        (error: any) => {
             // handle login error here
             console.log(error);
         } );

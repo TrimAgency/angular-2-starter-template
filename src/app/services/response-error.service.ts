@@ -8,7 +8,7 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class ResponseErrorService extends Http {
 
-    constructor( backend: XHRBackend, 
+    constructor( backend: XHRBackend,
                  defaultOptions: RequestOptions,
                  private authService: AuthService ) {
                  super(backend, defaultOptions);
@@ -19,6 +19,7 @@ export class ResponseErrorService extends Http {
 
     private catchErrors() {
         return ( response: Response ) => {
+            // add additional handlers if needed
             if (response.status === 401) {
                 // handle response here
                 this.authService.logout();

@@ -1,7 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
-    selector: 'login-form',
+    selector: 'app-login-form',
     styleUrls: [],
     templateUrl: 'login-form.component.html'
 })
@@ -10,13 +10,13 @@ export class LoginFormComponent {
     user: Object = {};
 
     @Output()
-    submitLogin: EventEmitter<any> = new EventEmitter();
+    submitLogin: EventEmitter<Object> = new EventEmitter<Object>();
 
     constructor() {};
 
-    submitForm() {
-        // this.submitLogin.emit(this.user);
-        console.log('login!')
+    login(form: Object, isValid: boolean) {
+      console.log('login-form', form, isValid);
+      this.submitLogin.emit(form);
     }
 
 }

@@ -1,22 +1,32 @@
 <div>
-  <form #form="ngForm">
-
+  <form #form="ngForm"
+        (ngSubmit)="login(form.value, form.valid)">
+   {{ form | json }}
     <div class="form-input-group">
+
       <input type="email"
              name="email" 
              [(ngModel)]="user.email"
              class="form-control" 
-             placeholder="Enter Email">
+             placeholder="Enter Email"
+             required>
+      <div *ngIf="email.errors?.required && email.dirty">
+        Email is required
+      </div>
+
       <input type="password" 
              name="password"
              [(ngModel)]="user.password"
              class="form-control" 
-             placeholder="Enter Password">
+             placeholder="Enter Password"
+             required>
+       <div *ngIf="password.errors?.required && password.dirty">
+        Password is required
+      </div>
     </div>
-    {{ form.value | json }}
+
     <div class="form-submit">
         <button type="submit"
-                (click)="submitForm()"
                 >submit</button>
     </div>
 
