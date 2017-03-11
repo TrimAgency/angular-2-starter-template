@@ -2,4 +2,4 @@ export const environment = {
   production: true
 };
 
-export const API_URL = 'STAGING URL';
+export const API_URL = 'STAGING_URL';

@@ -8,7 +8,7 @@ import { LoginComponent } from './containers/login.component';
 // Components
 import { LoginFormComponent } from './components/login-form.component';
 // Services
-import { LoginService } from './login.service';
+import { LoginService } from './services/login.service';
 
 @NgModule({
     declarations: [

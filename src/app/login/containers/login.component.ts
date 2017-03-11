@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoginService } from '../login.service';
+import { LoginService } from '../services/login.service';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -8,9 +8,9 @@ import { AuthService } from '../../services/auth.service';
     template: `
       <div>
 
-        <login-form 
+        <app-login-form 
         (submitLogin)="submitLogin($event)"
-        ></login-form>
+        ></app-login-form>
 
       </div>
     `
@@ -24,7 +24,7 @@ export class LoginComponent {
         .login(event.email, event.password)
         .subscribe( (data) => {
             // handle login success here
-            this.authService.setToken(data.jwt);
+            // this.authService.setToken(data.jwt);
         },
         (error: any) => {
             // handle login error here

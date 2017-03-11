@@ -12,10 +12,10 @@ export class LoginFormComponent {
     @Output()
     submitLogin: EventEmitter<Object> = new EventEmitter<Object>();
 
-    constructor() {};
+    constructor() {
+    };
 
     login(form: Object, isValid: boolean) {
-      console.log('login-form', form, isValid);
       this.submitLogin.emit(form);
     }
 
