@@ -13,7 +13,6 @@
       <div *ngIf="email.errors?.required && !email.pristine">
         Email is required
       </div>
-      {{ email }}
       <input type="password" 
              name="password"
              [(ngModel)]="user.password"
