@@ -10,9 +10,10 @@
              class="form-control" 
              placeholder="Enter Email"
              required>
-      <div *ngIf="email.errors?.required && email.dirty">
+      <div *ngIf="email.errors?.required && !email.pristine">
         Email is required
       </div>
+      {{ email }}
       <input type="password" 
              name="password"
              [(ngModel)]="user.password"
@@ -20,7 +21,7 @@
              class="form-control" 
              placeholder="Enter Password"
              required>
-       <div *ngIf="password.errors?.required && password.dirty">
+       <div *ngIf="password.errors?.required && !password.pristine">
         Password is required
       </div>
     </div>
@@ -31,6 +32,5 @@
                 [disabled]="form.invalid"
                 >submit</button>
     </div>
-
   </form>
 </div>

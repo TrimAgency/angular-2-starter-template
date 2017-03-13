@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { API_URL } from '../environments/environment'
 
 @Component({
   selector: 'app-root',

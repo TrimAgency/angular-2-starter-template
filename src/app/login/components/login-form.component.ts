@@ -16,7 +16,9 @@ export class LoginFormComponent {
     };
 
     login(form: Object, isValid: boolean) {
-      this.submitLogin.emit(form);
+      if (isValid) {
+        this.submitLogin.emit(form);
+      }
     }
 
 }
