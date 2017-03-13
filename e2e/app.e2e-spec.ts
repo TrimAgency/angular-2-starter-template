@@ -7,8 +7,8 @@ describe('trim-ng2-starter App', () => {
     page = new TrimNg2StarterPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display message saying Welcome to the Trim Angular 2 starter template', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Welcome to the Trim Angular 2 starter template');
   });
 });
