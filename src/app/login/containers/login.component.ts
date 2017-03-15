@@ -23,12 +23,12 @@ export class LoginComponent {
         this.loginService
         .login(event.email, event.password)
         .subscribe( (data) => {
-            // const jwt = data.jwt;
-            // this.authService.setToken(jwt);
+          console.log(data.jwt);
+          this.authService.setToken(data.jwt);
         },
         (error: any) => {
             // handle login error here
-            console.log(error);
+            console.log('error', error);
         } );
     }
 }
