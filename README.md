@@ -1,11 +1,26 @@
 # TrimNg2Starter
 
+Angular 2 starter template currently features: Angular 4, Jasmine for unit tests, Protractor for e2e tests, Angular CLI for dev environment, production builds and running tests.
+
+## Prerequisites
+
+Must have Node 6.9.0 or higher AND NPM v3.0 or higher.
+Yarn: https://yarnpkg.com/en/docs/install
+Angular CLI: npm install -g @angular/cli
+
+## First time use
+
+Please set the Angular CLI to use yarn: ng set —global packageManager=yarn
+After cloning the repo run yarn install.
+
 ## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+Run `ng serve` for dev server. Navigate to `http://localhost:4200/`. 
+Optionaly you can use ng serve --port NUMBER.  Also you can serve any registered environment by ng serve --environment [ENVIRONMENT NAME]. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build. For other environments user ng build --environment [ENVIRONMENT NAME]. Note: additional environments must be registered in the .angular-cli.json file under "environments".
 
 ## Running unit tests
 
