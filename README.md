@@ -20,7 +20,7 @@ Optionaly you can use ng serve --port NUMBER.  Also you can serve any registered
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build. For other environments user ng build --environment [ENVIRONMENT NAME]. Note: additional environments must be registered in the .angular-cli.json file under "environments".
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build. For other environments use ng build --environment [ENVIRONMENT NAME]. Note: additional environments must be registered in the .angular-cli.json file under "environments".
 
 ## Running unit tests
 
