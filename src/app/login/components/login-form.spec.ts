@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { LoginFormComponent } from './login-form.component';
+import { User } from '../models/user.interface';
 
 describe('LoginFormComponent', () => {
   let fixture, component;
@@ -21,7 +22,6 @@ describe('LoginFormComponent', () => {
 
   it('should create the login-form component', () => {
     expect(component).toBeDefined();
-    expect(component.user).toEqual({});
   });
 
   it('should call submit event if form valid', () => {

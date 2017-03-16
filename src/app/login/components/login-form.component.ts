@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { User } from '../models/user.interface';
 
 @Component({
     selector: 'app-login-form',
@@ -7,18 +8,19 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 
 export class LoginFormComponent {
-    user: Object = {};
+  user: User;
 
-    @Output()
-    submitLogin: EventEmitter<Object> = new EventEmitter<Object>();
+  @Output()
+    submitLogin: EventEmitter<User> = new EventEmitter<User>();
 
     constructor() {
-    };
+  };
 
-    login(form: Object, isValid: boolean) {
-      if (isValid) {
-        this.submitLogin.emit(form);
-      }
-    }
+  login(value: User, isValid: boolean) {
+    if (isValid) {
+        console.log(value);
+        this.submitLogin.emit(value);
+     }
+   }
 
 }
