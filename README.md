@@ -5,12 +5,12 @@ Angular 2 starter template currently features: Angular 4, Jasmine for unit tests
 ## Prerequisites
 
 Must have Node 6.9.0 or higher AND NPM v3.0 or higher.
-Yarn: https://yarnpkg.com/en/docs/install
-Angular CLI: npm install -g @angular/cli
+Yarn installed. To install yarn: https://yarnpkg.com/en/docs/install.
+Angular CLI installed. To install the angular CLI: npm install -g @angular/cli.
 
 ## First time use
 
-Please set the Angular CLI to use yarn: ng set —global packageManager=yarn
+Please set the Angular CLI to use yarn: ng set —global packageManager=yarn.
 After cloning the repo run yarn install.
 
 ## Development server
