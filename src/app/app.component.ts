@@ -13,7 +13,6 @@ export class AppComponent implements OnInit{
 
   ngOnInit () {
     this.title = 'Welcome to the Trim Angular 2 starter template';
-
     this.titleService.setTitle(this.title);
   }
 

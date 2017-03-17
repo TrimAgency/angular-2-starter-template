@@ -13,8 +13,7 @@ export class LoginFormComponent {
   @Output()
     submitLogin: EventEmitter<User> = new EventEmitter<User>();
 
-    constructor() {
-  };
+  constructor() {};
 
   login(value: User, isValid: boolean) {
     if (isValid) {
