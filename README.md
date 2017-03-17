@@ -2,16 +2,20 @@
 
 Angular 2 starter template currently features: Angular 4, Jasmine for unit tests, Protractor for e2e tests, Angular CLI for dev environment, production builds and running tests.
 
+Out of box features include: Login feature module, RequestOptions service to send JWT with each request, ResponseError Service to handle unauthorized users, AuthService to set and retrieve JWT tokens from localStorage, Flex-box-grid and environment variable files.
+
 ## Prerequisites
 
-Must have Node 6.9.0 or higher AND NPM v3.0 or higher.
-Yarn installed. To install yarn: https://yarnpkg.com/en/docs/install.
-Angular CLI installed. To install the angular CLI: npm install -g @angular/cli.
+Must have Node 6.9.0 or higher AND NPM v3.0 or higher. Yarn and angular CLI installed. To install yarn: https://yarnpkg.com/en/docs/install. To install the angular CLI: `npm install -g @angular/cli`.
 
 ## First time use
 
-Please set the Angular CLI to use yarn: ng set —global packageManager=yarn.
-After cloning the repo run yarn install.
+Please set the Angular CLI to use yarn: `ng set —global packageManager=yarn`.
+After cloning the repo, `run yarn install`.
+
+Set env variables in the environment.ts, environment-staging.ts, and evnironment.prod.ts
+
+Set the this.title in app.component.ts to your project name for document title.
 
 ## Development server
 
