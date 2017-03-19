@@ -17,6 +17,10 @@ Set env variables in the environment.ts, environment-staging.ts, and evnironment
 
 Set the this.title in app.component.ts to your project name for document title.
 
+## Adding 3rd Part Libraries
+
+For css or scss files add path to .angular-cli.json "styles" array. For js dependencies add to package.json via `yarn add` [name of dependency] and add path of file to .angular-cli.json "scripts" array.  If @typings exist for library install via `yarn add @types\` [library name].  If @typings DO NOT exist add a typing for that library manually in the custom_typings.d.ts file. For example in the custom_typings.d.ts add `declare module 'typeless-package';` Then in your component or file, `import * as typelessPackage from 'typeless-package';`. For more information see https://github.com/angular/angular-cli/wiki/stories-third-party-lib.
+
 ## Development server
 
 Run `ng serve` for dev server. Navigate to `http://localhost:4200/`. 
