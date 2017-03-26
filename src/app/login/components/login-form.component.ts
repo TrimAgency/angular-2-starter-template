@@ -3,7 +3,6 @@ import { User } from '../models/user.interface';
 
 @Component({
     selector: 'app-login-form',
-    styleUrls: [],
     templateUrl: 'login-form.component.html'
 })
 
