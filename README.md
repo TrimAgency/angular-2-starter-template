@@ -6,12 +6,16 @@ Out of box features include: Login feature module, RequestOptions service to sen
 
 ## Prerequisites
 
-Must have Node 6.9.0 or higher AND NPM v3.0 or higher. Yarn and angular CLI installed. To install yarn: https://yarnpkg.com/en/docs/install. To install the angular CLI: `npm install -g @angular/cli`.
+Must have Node 6.9.0 or higher AND NPM v3.0 or higher; Yarn, angular CLI 
+installed.
+
+* [Install Yarn](https://yarnpkg.com/en/docs/install)
+* `npm install -g @angular/cli` - To install the angular CLI
 
 ## First time use
 
-Please set the Angular CLI to use yarn: `ng set —global packageManager=yarn`.
-After cloning the repo, `run yarn install`.
+Please set the Angular CLI to use yarn: `ng set --global packageManager=yarn`.
+After cloning the repo, run `yarn install`.
 
 Set env variables in the environment.ts, environment-staging.ts, and evnironment.prod.ts
 
