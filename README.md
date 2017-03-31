@@ -42,3 +42,12 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
+
+## Heroku Deployment
+
+* This starter app is Heroku deployment ready. Build environments are determined
+  by the `NODE_ENV` system environment variable.  As such, please ensure that
+  you set the appropriate Config Vars for your staging and production
+  environments.
+* Static assets will be served from `dist/` folder
+* SSL is forced
