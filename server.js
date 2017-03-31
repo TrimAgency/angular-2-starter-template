@@ -15,14 +15,12 @@ const forceSSL = function() {
 
 app.use(forceSSL());
 
+// only serve files from dist build folder
+app.use(express.static(__dirname + '/dist'));
+
 // path location strategy
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
 
-// only serve files from dist build folder
-app.use(express.static(__dirname + '/dist'));
-
 app.listen(process.env.PORT || 8080);
-
-
