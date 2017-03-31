@@ -7,6 +7,6 @@ export class RequestOptionsService extends BaseRequestOptions {
 
     constructor(private authService: AuthService) {
         super();
-        this.headers.set('Authorization', 'Bearer ${ authService.getToken() }');
+        this.headers.set('Authorization', `Bearer ${ authService.getToken() }`);
     }
 }
