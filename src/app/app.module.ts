@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule, Http, RequestOptions } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 // Components
@@ -13,6 +13,7 @@ import { RequestOptionsService } from './services/request-options.service';
 import { ResponseErrorService } from './services/response-error.service';
 
 // Custom Modules
+import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './login/login.module';
 
 @NgModule({
@@ -23,9 +24,9 @@ import { LoginModule } from './login/login.module';
     // Angular Modules
     BrowserModule,
     CommonModule,
-    RouterModule,
 
     // Custom Modules
+    AppRoutingModule,
     LoginModule
   ],
   providers: [
@@ -35,4 +36,9 @@ import { LoginModule } from './login/login.module';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  // Comment in the lines below to inspect router configuration in the console:
+  // constructor(router: Router) {
+  //   console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+  // }
+}
