@@ -22,7 +22,6 @@ export class LoginComponent {
         this.loginService
         .login(event.email, event.password)
         .subscribe( (data) => {
-          console.log(data.jwt);
           this.authService.setToken(data.jwt);
         },
         (error: any) => {

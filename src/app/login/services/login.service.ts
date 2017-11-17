@@ -14,7 +14,7 @@ export class LoginService {
         email: email,
         password: password
     }};
-
+    console.log('from service', API_URL)
     return this.http.post<Jwt>(`${API_URL}/user_token`, data);
   }
 }

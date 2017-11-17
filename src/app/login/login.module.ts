@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
@@ -18,7 +17,6 @@ import { LoginService } from './services/login.service';
     ],
     imports: [
         CommonModule,
-        HttpModule,
         FormsModule,
         HttpClientModule
     ],
