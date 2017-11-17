@@ -14,6 +14,7 @@ import { ResponseErrorService } from './services/response-error.service';
 
 // Custom Modules
 import { LoginModule } from './login/login.module';
+import { SpinnerModule } from './easy-spinner/spinner.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoginModule } from './login/login.module';
     RouterModule,
 
     // Custom Modules
-    LoginModule
+    LoginModule,
+    SpinnerModule
   ],
   providers: [
     AuthService,
