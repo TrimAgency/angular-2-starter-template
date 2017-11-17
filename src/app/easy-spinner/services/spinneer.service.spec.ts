@@ -17,12 +17,12 @@ describe('Spinner Service', () => {
 
     it('should turn on the spinner', () => {
         spinnerService.show();
-        expect(next).toHaveBeenCalledWith(false);
+        expect(next).toHaveBeenCalledWith(true);
     });
 
     it('should turn off the spinner', () => {
         spinnerService.hide();
-        expect(next).toHaveBeenCalledWith(true);
+        expect(next).toHaveBeenCalledWith(false);
     });
 
 });
