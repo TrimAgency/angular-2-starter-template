@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule, Http, RequestOptions } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // Components
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { AuthService } from './services/auth.service';
 import { RequestOptionsService } from './services/request-options.service';
 import { ResponseErrorService } from './services/response-error.service';
+import { AuthInterceptor } from './services/auth.interceptor';
 
 // Custom Modules
 import { LoginModule } from './login/login.module';
@@ -33,7 +34,11 @@ import { SpinnerModule } from './easy-spinner/spinner.module';
   ],
   providers: [
     AuthService,
-    { provide: RequestOptions, useClass: RequestOptionsService },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
     { provide: Http, useClass: ResponseErrorService }
   ],
   bootstrap: [AppComponent]
