@@ -6,10 +6,10 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title: string = 'Welcome to the Trim Angular 2 starter template';
 
-  constructor( public titleService: Title) {}
+  constructor( public titleService: Title ) {}
 
   ngOnInit () {
     this.titleService.setTitle(this.title);
