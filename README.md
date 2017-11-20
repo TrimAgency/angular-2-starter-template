@@ -1,12 +1,12 @@
 # TrimNg2Starter
 
-Angular 2 starter template currently features: Angular 4, Jasmine for unit tests, Protractor for e2e tests, Angular CLI for dev environment, production builds and running tests.
+Angular 2 starter template currently features: Angular 5, Jasmine for unit tests, Protractor for e2e tests, Angular CLI v1.5.0 for dev environment, production builds and running tests.
 
-Out of box features include: Login feature module, RequestOptions service to send JWT with each request, ResponseError Service to handle unauthorized users, AuthService to set and retrieve JWT tokens from localStorage, Flex-box-grid and environment variable files.
+Out of box features include: Login feature module, Request Interceptor that mutates request Authorization header with JWT, ResponseError Intereptor to handle 401 unauthorized responses from API, AuthService to set and retrieve JWT tokens from localStorage, Flex-box-grid and environment variable files.
 
 ## Prerequisites
 
-Must have Node 6.9.0 or higher AND NPM v3.0 or higher; Yarn, angular CLI 
+Must have Node 6.9.0 or higher AND NPM v3.0 or higher; Yarn, angular CLI v1.5.0
 installed.
 
 * [Install Yarn](https://yarnpkg.com/en/docs/install)

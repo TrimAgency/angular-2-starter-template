@@ -1,19 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule, Http, RequestOptions } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
 
 // Components
 import { AppComponent } from './app.component';
 
 // Services
 import { AuthService } from './services/auth.service';
-import { RequestOptionsService } from './services/request-options.service';
-import { ResponseErrorService } from './services/response-error.service';
+import { AuthInterceptor } from './services/auth.interceptor';
+import { ResponseInterceptor } from './services/response.interceptor';
 
 // Custom Modules
 import { LoginModule } from './login/login.module';
+import { SpinnerModule } from './easy-spinner/spinner.module';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,17 @@ import { LoginModule } from './login/login.module';
     RouterModule,
 
     // Custom Modules
-    LoginModule
+    LoginModule,
+    SpinnerModule
   ],
   providers: [
     AuthService,
-    { provide: RequestOptions, useClass: RequestOptionsService },
-    { provide: Http, useClass: ResponseErrorService }
+    {
+      provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS, useClass: ResponseInterceptor, multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

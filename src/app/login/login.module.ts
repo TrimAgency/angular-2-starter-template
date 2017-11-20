@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 // Containers
@@ -17,8 +17,8 @@ import { LoginService } from './services/login.service';
     ],
     imports: [
         CommonModule,
-        HttpModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule
     ],
     exports: [
         LoginComponent

@@ -1,37 +1,34 @@
 import { TestBed, async, inject } from '@angular/core/testing';
 import { LoginService } from './login.service';
-import { MockBackend } from '@angular/http/testing';
-import { Http, HttpModule, XHRBackend, Response, ResponseOptions } from '@angular/http';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 describe('LoginService', () => {
-  let mockbackend, service;
+  let service: LoginService, httpMock: HttpTestingController;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ HttpModule ],
+      imports: [ HttpClientTestingModule ],
       providers: [
-          LoginService,
-          // replace XHRBackend class with MockBackend
-          { provide: XHRBackend, useClass: MockBackend }
-           ]
+          LoginService
+        ]
       });
   }));
 
-  beforeEach(inject([LoginService, XHRBackend], (_service, _mockbackend) => {
+  beforeEach(inject([LoginService, HttpTestingController], (_service, _httpMock) => {
     service = _service;
-    mockbackend = _mockbackend;
+    httpMock = _httpMock;
   }));
 
   it('should recieve a JWT from server is login successful', () => {
     const payload = { auth: { email: 'fake@fake.com', password: 'password' } };
     const response = 'JWT1234567890JHFHSJHFSJ';
 
-    mockbackend.connections.subscribe( connection => {
-      connection.mockRespond( new Response(new ResponseOptions({body: JSON.stringify(response)})));
+    service.login('fake@fake.com', 'password').subscribe( data => {
+      expect(data).toContain(response);
     });
 
-    service.login(payload).subscribe(jwt => {
-      expect(jwt).toEqual(response);
-    });
+    const post = httpMock.expectOne(`http://localhost:3000/user_token`);
+    expect(post.request.method).toBe('POST');
+    post.flush(response);
 
   });
 });
