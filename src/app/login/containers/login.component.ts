@@ -7,7 +7,7 @@ import { AuthService } from '../../services/auth.service';
     template: `
       <div>
 
-        <app-login-form 
+        <app-login-form
         (submitLogin)="submitLogin($event)"
         ></app-login-form>
 

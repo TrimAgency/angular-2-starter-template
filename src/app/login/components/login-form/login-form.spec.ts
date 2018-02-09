@@ -1,7 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { LoginFormComponent } from './login-form.component';
-import { User } from '../models/user.interface';
+import { User } from '../../models/user.interface';
 
 describe('LoginFormComponent', () => {
   let fixture, component;
