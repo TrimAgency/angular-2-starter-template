@@ -20,7 +20,8 @@
       "prefix": "app",
       "styles": [
         "styles.scss",
-        "assets/css/flexboxgrid.min.css"
+        "assets/css/flexboxgrid.min.css",
+        "assets/css/animate.min.css"
       ],
       "scripts": [
       ],
