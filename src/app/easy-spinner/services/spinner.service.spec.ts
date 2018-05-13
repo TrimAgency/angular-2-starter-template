@@ -1,8 +1,6 @@
 import { SpinnerService } from './spinner.service';
 
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
-import 'rxjs/add/observable/of';
+import { Observable, Observer, of } from 'rxjs';
 
 describe('Spinner Service', () => {
     let spinnerService, next;
