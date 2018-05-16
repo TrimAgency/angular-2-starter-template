@@ -1,14 +1,13 @@
 import { TestBed, async } from '@angular/core/testing';
 import { By } from '@angular/platform-browser'
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
+import { Observable, of } from 'rxjs';
 import { SpinnerComponent } from './spinner.component';
 
 import { SpinnerService } from '../services/spinner.service';
 
 
 class MockService {
-    spinnerControl = Observable.of(false);
+    spinnerControl = of(false);
 }
 
 describe('SpinnerComponent', () => {

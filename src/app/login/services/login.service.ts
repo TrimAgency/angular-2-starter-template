@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { API_URL } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Jwt } from '../models/jwt.interface';
