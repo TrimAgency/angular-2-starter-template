@@ -28,9 +28,7 @@
                             }
                         ],
                         "styles": [
-                            "src/styles.scss",
-                            "src/assets/css/flexboxgrid.min.css",
-                            "src/assets/css/animate.min.css"
+                            "src/styles.scss"
                         ],
                         "scripts": [],
                         "polyfills": "src/polyfills.ts"
