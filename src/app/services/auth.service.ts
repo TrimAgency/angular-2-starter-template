@@ -6,7 +6,7 @@ export class AuthService {
   // be sure to change the name of app-token to your-app-name-token
 
     getToken() {
-       let token = localStorage.getItem('app-token') || '';
+       const token = localStorage.getItem('app-token') || '';
        return token;
     }
 

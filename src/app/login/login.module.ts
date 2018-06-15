@@ -22,9 +22,6 @@ import { LoginService } from './services/login.service';
     ],
     exports: [
         LoginComponent
-    ],
-    providers: [
-        LoginService
     ]
 })
 
