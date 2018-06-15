@@ -32,7 +32,6 @@ import { SpinnerModule } from './easy-spinner/spinner.module';
     SpinnerModule
   ],
   providers: [
-    AuthService,
     {
       provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
     },
